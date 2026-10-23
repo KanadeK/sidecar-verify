@@ -1,0 +1,42 @@
+{
+  "name": "sidecar-verify",
+  "version": "0.1.0",
+  "description": "Read-only gzip and Brotli sidecar integrity checks for static deployments.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "sidecar-verify": "bin/sidecar-verify.js"
+  },
+  "exports": "./src/verify.js",
+  "files": [
+    "bin/",
+    "src/",
+    "examples/",
+    "README.zh-CN.md",
+    "SECURITY.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/verify.js && node --check bin/sidecar-verify.js && node --check test/verify.test.js",
+    "demo": "node examples/demo.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KanadeK/sidecar-verify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KanadeK/sidecar-verify/issues"
+  },
+  "keywords": [
+    "gzip",
+    "brotli",
+    "static-site",
+    "integrity",
+    "ci",
+    "deployment"
+  ]
+}

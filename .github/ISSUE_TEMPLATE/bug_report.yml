@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a reproducible problem using synthetic data.
+body:
+  - type: markdown
+    attributes:
+      value: For security concerns, follow SECURITY.md. Never upload private data.
+  - type: input
+    id: version
+    attributes:
+      label: Version, runtime and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal synthetic reproduction
+      description: Include commands, expected result and actual result. Remove private paths.
+    validations:
+      required: true
